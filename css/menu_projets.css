@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Staylista';
+    src: url('../Typographies/Staylista-Regular.woff2') format('woff2'),
+        url('../Typographies/Staylista-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff9ef;
+    color: black;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    font-size: 2rem;
+    font-family: 'Staylista';
+    position: sticky;
+    top: 30px;
+    z-index: 100;
+}
+header a {
+    text-decoration: none;
+    color: #ec2929;
+}
+
+#logo {
+    padding-left: 20px;
+}
+
+footer{
+    font-family: 'staylista';
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-size: 9em;
+    color: #ec2929;
+    font-family: 'Great Warrior-Personal use';
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+img[alt="Projet 4"] {
+    max-width: 400px;
+}
+figure:hover img {
+    transform: translateY(-10px) scale(1.02);
+}
+
+h2 {
+    font-size: 4em;
+    color: #ec2929;
+    font-family: 'staylista';
+    margin-left: 200px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+figure{
+    font-family:'poppins', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}

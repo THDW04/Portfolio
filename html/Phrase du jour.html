@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phrase du jour</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+body{
+    background: rgb(231, 185, 252);
+}
+.quote-box{
+    background: #fff;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.quote-box h2 {
+    font-size: 2rem ;
+    margin-bottom: 40px;
+    position: relative;
+}
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(153,20,230);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.quote-box blockquote{
+    font-size: 1.5em;
+    min-height: 110px;
+}
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: '"';
+}
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.quote-box button{
+    background: rgb(153, 20, 230);
+    color: #fff;
+    border: 1px solid rgb(153,20,230);
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <div class="quote-box">
+        <h2> Phrase du jour</h2>
+        <blockquote id="quote">Chargement...</blockquote>
+            <div>
+                <button onclick=" getquote(api_url)">Nouvelle Phrase</button>
+            </div>
+    </div>
+
+    <script>
+        const quote = document.getElementById("quote");
+        
+        const api_url = "https://luha.alwaysdata.net/api/";
+        async function getquote(url){
+            const response =  await fetch(url);
+            var data = await response.json();
+            console.log(data);
+            quote.innerHTML = data.citation;
+        }
+        getquote(api_url);
+    </script>
+</body>
+</html>

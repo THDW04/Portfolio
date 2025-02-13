@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nathalia VILASSE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <a href="#" id="logo">Nana</a>
+        <nav>
+            <ul>
+                <li><a href="html/menu_projets.html">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Portfolio <br> 2024/2025</h1>
+                <p>Entre code et design, découvrez un portfolio qui me ressemble.</p>
+            </div>
+        </section>
+        <section id="aboutme">
+            <h2>A propos de moi !</h2>
+            <h3>Qui suis-je ?</h3>
+            <div id="presentation">
+                <img src="Images/Profil.png" alt="Photo de profil">
+                <p> Je suis Nathalia, une étudiante en BUT Métiers du Multimédia et de l’Internet, une formation qui me permet d’explorer de domaines variés comme le design graphique, le développement web, et la production audiovisuelle. Ce portfolio rassemble des projets concrets qui reflètent mon parcours et mes compétences. En tant qu’étudiante, je suis constamment à la recherche de nouveaux défis, et ce portfolio est pour moi l’opportunité de présenter non seulement mes compétences, mais aussi ma vision personnelle des projets que je réalise. Mon objectif est de continuer à explorer des domaines comme la création de sites web interactifs, et la communication visuelle, à travers des opportunités professionnelles.</p>
+            </div>
+
+            <h3>Quelles sont mes compétences ?</h3>
+            <section id="skills">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+
+                <div id="skills-container">
+
+                    <div class="competences">
+                        <h4>Développement Web</h4>
+                        <img src="Images/web.jpg" alt="illustration développement web">
+                        <p>Je conçois des interfaces interactives en utilisant HTML, CSS et JavaScript. <br> 
+                        J'intègre des animations et des effets dynamiques <br> pour améliorer l'expérience utilisateur.</p>
+                        <p>01</p>
+                    </div>
+                    
+                    <div class="competences">
+                        <h4>Design Graphique</h4>
+                        <img src="Images/design.jpg" alt="illustration design graphique">
+                        <p>Je réalise des visuels impactants en combinant créativité et technique. <br> 
+                           Je maîtrise Photoshop, Illustrator et InDesign pour la conception d'affiches, <br> d'identités visuelles et de mises en page éditoriales.</p>
+                        <p>02</p>
+                    </div>
+                    
+                    <div class="competences">
+                        <h4>Montage Vidéo & Motion Design</h4>
+                        <img src="Images/video.jpg" alt="illustration montage vidéo">
+                        <p>Je réalise des montages dynamiques et du motion design <br>en utilisant Adobe Premiere Pro et After Effects. <br> 
+                        J'optimise la colorimétrie, le rythme et l'intégration sonore, <br>tout en créant des animations pour enrichir les contenus audiovisuels.</p>
+                        <p>03</p>
+                    </div>
+                    
+                </div>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </section>
+
+        </section>
+
+        <section id="projets">
+            <h2>Mes projets</h2>
+            <div>
+                <h3>en développement web</h3>
+                <p class="hover-area" data-image="Images/sitemusique.png"><a href="html/projets.html?id=1">Site web musical</a></p> 
+                
+                <p class="hover-area" data-image="Images/galerie.png"><a href="html/projets.html?id=2">Galerie personnelle</a></p>
+                <p class="hover-area" data-image="Images/phrases.png"><a href="html/projets.html?id=3">Phrase du jour</a></p>
+            </div>
+            <div>
+                <h3>en création graphique</h3>
+                <p class="hover-area"data-image="Images/Affiche2.jpg"><a href="html/projets.html?id=4">Affiche d'information</a></p>
+                <p class="hover-area" data-image="Images/Livret.jpg"><a href="html/projets.html?id=5">Livret filmique</a></p>
+                <p class="hover-area" data-image="Images/voiture.png"><a href="html/projets.html?id=6">Motion Design</a></p>
+            </div>
+            <div>
+                <h3>en montage vidéo</h3>
+                <p class="hover-area" data-image="Images/ITW.jpg"><a href="html/projets.html?id=7">Interview avec un journaliste</a></p>
+            </div>
+
+            <img  alt="image de survol" id="hover-image">
+        </section>
+        <section class="contact">
+            <h2 id="contact">Contact</h2>
+            <ul>
+                <li><i class="fa-solid fa-envelope"></i> <strong> Email :</strong> <a href="mailto:nathaliavilasse@gmail.com">nathaliavilasse@gmail.com</a></li>
+                <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/nathalia-vilasse-208733335" target="_blank"> Mon LinkedIn</a></li>
+                <li><i class="fa-brands fa-github"></i> <a href="https://github.com/THDW04" target="_blank">Mon GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 - Nathalia VILASSE</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

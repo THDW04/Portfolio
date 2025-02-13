@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Staylista';
+    src: url('../Typographies/Staylista-Regular.woff2') format('woff2'),
+        url('../Typographies/Staylista-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff9ef;
+    color: black;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-family: 'Staylista';
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #ec2929;
+}
+
+#logo {
+    padding-left: 20px;
+}
+
+h1 {
+    font-size: 11em;
+    margin: 0;
+    color: #ec2929;
+    font-family: 'Great Warrior-Personal use';
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    color: #ec2929;
+    text-align: center;
+}
+
+h2 {
+    font-size: 6em;
+    color: #ec2929;
+    font-family: 'staylista';
+    text-align: center;
+}
+
+h3 {
+    font-size: 3em;
+    color: #ec2929;
+    font-family: 'staylista';
+}
+
+section:not(#skills) {
+    min-height: 80vh;
+    padding-top: 100px;
+}
+
+#aboutme h3 {
+    margin-left: 100px;
+}
+
+#presentation {
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    margin-bottom: 250px;
+}
+
+#presentation img {
+    width: 600px;
+    height: 600px;
+    margin-left: 50px;
+    transition: all 0.5s;
+}
+
+#presentation img:hover {
+    content: url('../Images/Profil2.png');
+}
+
+#presentation p {
+    width: 60%;
+    margin-left: 100px;
+}
+
+h4 {
+    font-size: 2em;
+    font-family: 'staylista';
+}
+
+.competences:not(:first-child) {
+    display: none;
+}
+
+.competences {
+    padding: 30px 50px;
+    border-radius: 20px;
+    font-size: 1.3em;
+    background-color: rgba(197, 62, 21, 0.719);
+    color: #ffffff;
+}
+.competences p:last-child{
+    text-align: right;
+    color: #ffffff;
+}
+
+.competences img{
+    width: 300px;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    animation: updown 4s infinite;
+}
+@keyframes updown{
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+.competences video{
+    margin: auto;
+    display: block;
+}
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: 250px;
+}
+
+button{
+    font-size: 5em;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: 0 20px;
+    cursor: pointer;
+    color: #d92708;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button:active {
+    color: black;
+}
+
+.next {
+    right: 150px;
+}
+
+.prev {
+    left: 150px;
+}
+
+#projets h3 {
+    margin-left: 100px;
+    padding-top: 70px;
+}
+
+#projets p {
+    font-size: 4em;
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 75%;
+    border-bottom: solid 3px #ec2929;
+    transition: step-start 0.7s;
+}
+
+#projets p:nth-child(2) {
+    border-top: solid 3px #ec2929;
+}
+
+#projets p:hover {
+    background-color: #ec2929;
+}
+
+#projets a {
+    text-decoration: none;
+    color: black;
+}
+#hover-image {
+
+    position: absolute;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 10px;
+    height: auto;
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.1s ease;
+}
+
+.hover-area:hover+#hover-image {
+    display: block;
+}
+.contact ul{
+    font-size: 3em;
+    text-align: center;
+    list-style: none;
+}
+.contact a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #ec2929;
+}
+footer {
+    font-family: 'staylista';
+    text-align: center;
+    font-size: 1.5em;
+}

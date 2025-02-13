@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Staylista';
+    src: url('../Typographies/Staylista-Regular.woff2') format('woff2'),
+        url('../Typographies/Staylista-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    background-color: #fff9ef;
+    color: black;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    font-size: 2rem;
+    font-family: 'Staylista';
+    position: sticky;
+    top: 30px;
+    z-index: 100;
+}
+
+header a {
+    text-decoration: none;
+    color: #ec2929;
+    padding: 20px;
+}
+
+h1{
+    font-size: 8em;
+    color: #ec2929;
+    font-family: 'Great Warrior-Personal use';
+    text-align: center;
+}
+img, video, iframe {
+    width: 80%;
+    border-radius: 20px;
+    display: block;
+    margin: auto; 
+    box-shadow:10px 10px 20px rgba(0, 0, 0, 0.3) ;
+}
+
+#projet-content img[alt="Affiche d'information"]{
+    max-width: 50%;
+}
+video{
+    width: 70%;
+}
+iframe{
+    height: 900px;
+}
+#projet-content p {
+    font-size: 1.3em;
+    margin:50px auto;
+    width: 80%;
+}
+
+#projet-content a{
+    color: #ec2929;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    border: #ec2929 solid 3px;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 170px;
+    transition: all 0.5s;
+
+}
+
+#projet-content a:hover{
+    background-color: #ec2929;
+    color: white;
+}
+
+footer{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Staylista';
+    margin-top: 20px;
+}
