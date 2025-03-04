@@ -82,17 +82,25 @@ section:not(#skills) {
     margin-left: 100px;
 }
 
+a[href="Images/CV_N_VILASSE.pdf"]{
+    text-decoration: none;
+    color: #ec2929;
+}
+a[href="Images/CV_N_VILASSE.pdf"]:hover{
+    text-decoration: underline;
+}
 #presentation {
     font-size: 1.5em;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 250px;
 }
 
 #presentation img {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
+    align-items: center;
     margin-left: 50px;
     transition: all 0.5s;
 }
@@ -101,9 +109,8 @@ section:not(#skills) {
     content: url('../Images/Profil2.png');
 }
 
-#presentation p {
-    width: 60%;
-    margin-left: 100px;
+#presentation div {
+    grid-column: 2/4;
 }
 
 h4 {
