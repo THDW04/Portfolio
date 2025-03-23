@@ -315,4 +315,8 @@ footer {
         border-bottom: solid 3px #ec2929;
         transition: step-start 0.7s;
     }
+
+    #hover-image{
+        display: none;
+    }
 }
