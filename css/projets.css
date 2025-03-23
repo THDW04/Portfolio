@@ -80,3 +80,28 @@ footer{
     font-family: 'Staylista';
     margin-top: 20px;
 }
+
+@media screen and (max-width: 768px){
+    h1{
+        font-size:4em;
+    }
+
+    img, video, iframe {
+        width: 100%;
+    }
+
+    #projet-content a{
+        font-size: 1.2em;
+        padding: 10px;
+        border-radius: 50px;
+        transition: all 0.5s;
+        margin: 50px;
+    }
+    iframe{
+        max-height: 400px;
+    }
+
+    #projet-content img[alt="Affiche d'information"]{
+        width: 100% !important;
+    }
+}

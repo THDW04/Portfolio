@@ -210,29 +210,9 @@ button:active {
     border-top: solid 3px #ec2929;
 }
 
-#projets p:hover {
-    background-color: #ec2929;
-}
-
 #projets a {
     text-decoration: none;
     color: black;
-}
-#hover-image {
-
-    position: absolute;
-    min-width: 300px;
-    max-width: 400px;
-    border-radius: 10px;
-    height: auto;
-    display: none;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.1s ease;
-}
-
-.hover-area:hover+#hover-image {
-    display: block;
 }
 .contact ul{
     font-size: 3em;
@@ -251,4 +231,88 @@ footer {
     font-family: 'staylista';
     text-align: center;
     font-size: 1.5em;
+}
+@media screen and (min-width: 1200px){
+    #hover-image {
+
+        position: absolute;
+        min-width: 300px;
+        max-width: 400px;
+        border-radius: 10px;
+        height: auto;
+        display: none;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.1s ease;
+    }
+    
+    .hover-area:hover+#hover-image {
+        display: block;
+    }
+
+    #projets p:hover {
+        background-color: #ec2929;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header{
+        font-size: 1.6rem;
+        padding: 10px 15px; 
+        justify-content: flex-end;
+    }
+    #logo{
+        display: none;
+    }
+    h1{
+        font-size: 4.5em;
+    }
+    #aboutme h3{
+        margin:30px 20px;
+    }
+    #presentation{
+        font-size: 1.2em;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #presentation div{
+        max-width: 70%;
+    }
+    #presentation img{
+        width: 300px;
+        height: 300px;
+    }
+    .competences{
+        margin-bottom:30px;
+        position: sticky;
+        top: 10px;
+        background: rgb(236, 114, 77);
+        color: #000000;
+    }
+    .competences:not(:first-child){
+        display: block;
+    }
+    .prev, .next{
+        display: none;
+    }
+    section{
+        padding:0;
+    }
+    #projets h3 {
+        font-size: 2.5em;
+        margin-left: 10px;
+        padding-top: 70px;
+    }
+    
+    #projets p {
+        font-size: 2em;
+        margin: 0 auto;
+        padding: 40px 0;
+        width: 75%;
+        border-bottom: solid 3px #ec2929;
+        transition: step-start 0.7s;
+    }
 }
