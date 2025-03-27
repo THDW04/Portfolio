@@ -25,6 +25,8 @@ const projets = {
         titre: "Affiche d'information",
         description: "Pour la journée portes ouvertes, j'ai réalisé une affiche afin de sensibiliser les lycéens au scandale de Cambridge Analytica. L'objectif était non seulement de capter leur attention, mais aussi de les inciter à visionner un documentaire qui explore en profondeur les enjeux de ce scandale. Étant un sujet complexe et peu connu de certains jeunes, il était essentiel de créer un visuel impactant qui susciterait leur curiosité et leur donnerait envie de s'informer davantage. Pour créer l'affiche, j'ai utilisé Photoshop et me suis concentrée sur un design minimaliste et percutant. J'ai opté pour des couleurs sombres et un contraste fort afin d'attirer l'attention,tout en mettant en avant des éléments graphiques représentant des aspects clés du scandale (comme le logo de Cambridge Analytica en arrière-plan). L'affiche devait non seulement être informative, mais aussi intrigante, de façon à pousser les lycéens à s'intéresser au sujet. Le slogan a été conçu pour être court et direct, afin de provoquer une réaction immédiate.",
         image: "../Images/Affiche.jpg",
+        lien:"../Images/Affiche.pdf",
+        type: "pdf"
     },
     5: {
         titre: "Livret filmique",
@@ -56,8 +58,8 @@ if (projets[projetId]) {
     let contentHTML = `
        <h1>${projet.titre}</h1>
        <div class="grid"> <img src="${projet.image}" alt="${projet.titre}">
-        <p>${projet.description}</p> </div>
-        <div class="popup"><img src="${projet.image}" alt="Affiche en grand"> </div>`;
+        <p>${projet.description}</p> </div>`;
+
 
     // Gestion des vidéos
     if (projet.type === "video") {
@@ -94,16 +96,3 @@ if (projets[projetId]) {
     document.getElementById("projet-content").innerHTML = `<p>Projet non trouvé.</p>`;
 }
 
-    //agrandir l'image 
-    let affiche = document.querySelector('img[alt="Affiche d\'information"]');
-    let popup = document.querySelector('.popup');
-
-    // Ouvrir le pop-up au clic sur l'image
-    affiche.addEventListener('click', function () {
-        popup.classList.add('active');
-    });
-
-    // Fermer le pop-up en cliquant n'importe où sur l'écran
-    popup.addEventListener('click', function () {
-        popup.classList.remove('active');
-    });
