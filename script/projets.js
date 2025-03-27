@@ -55,25 +55,26 @@ if (projets[projetId]) {
     const projet = projets[projetId];
     let contentHTML = `
        <h1>${projet.titre}</h1>
-        <img src="${projet.image}" alt="${projet.titre}">
-        <p>${projet.description}</p>`;
+       <div class="grid"> <img src="${projet.image}" alt="${projet.titre}">
+        <p>${projet.description}</p> </div>
+        <div class="popup"><img src="${projet.image}" alt="Affiche en grand"> </div>`;
 
     // Gestion des vidéos
     if (projet.type === "video") {
         contentHTML = `
          <h1>${projet.titre}</h1>
-            <video controls>
+          <div class="grid">   <video controls>
                 <source src="${projet.video}" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo.
             </video>
-            <p>${projet.description}</p>`;
+            <p>${projet.description}</p></div>`;
     }
 
     else if (projet.type === "iframe") {
         contentHTML = `
         <h1>${projet.titre}</h1>
         ${projet.iframe}
-        <p>${projet.description}</p>
+        <p class="p-frame">${projet.description}</p>
         `;
     }
 
@@ -92,3 +93,17 @@ if (projets[projetId]) {
 } else {
     document.getElementById("projet-content").innerHTML = `<p>Projet non trouvé.</p>`;
 }
+
+    //agrandir l'image 
+    let affiche = document.querySelector('img[alt="Affiche d\'information"]');
+    let popup = document.querySelector('.popup');
+
+    // Ouvrir le pop-up au clic sur l'image
+    affiche.addEventListener('click', function () {
+        popup.classList.add('active');
+    });
+
+    // Fermer le pop-up en cliquant n'importe où sur l'écran
+    popup.addEventListener('click', function () {
+        popup.classList.remove('active');
+    });
