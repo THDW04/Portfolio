@@ -54,11 +54,6 @@ img, video, iframe {
 }
 #projet-content img[alt="Affiche d'information"]{
     max-width: 50%;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-#projet-content img[alt="Affiche d'information"]:hover{
-    transform: scale(1.1);
 }
 video{
     width: 70%;
