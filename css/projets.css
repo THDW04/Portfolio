@@ -6,6 +6,15 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Great Warrior-Personal use';
+    src: url('../Typographies/GreatWarriorPersonaluse.woff2') format('woff2'),
+        url('../Typographies/GreatWarriorPersonaluse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     background-color: #fff9ef;
     color: black;
