@@ -63,9 +63,11 @@ iframe{
 }
 #projet-content p {
     font-size: 1.3em;
+    margin-bottom: 50px;
+}
+.pa, p{
     grid-column: 3/5;
 }
-
 main a{
     color: #ec2929;
     font-size: 1.5em;
@@ -75,7 +77,6 @@ main a{
     padding: 20px;
     border-radius: 50px;
     transition: all 0.5s;
-    margin-left: 80px;
 }
 
 main a:hover{
@@ -93,7 +94,8 @@ main a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
-    margin-bottom: 100px;
+    margin: 0 50px 100px 0;
+   
 }
 
 footer{

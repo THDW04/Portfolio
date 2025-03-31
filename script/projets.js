@@ -25,8 +25,8 @@ const projets = {
         titre: "Affiche d'information",
         description: "Pour la journée portes ouvertes, j'ai réalisé une affiche afin de sensibiliser les lycéens au scandale de Cambridge Analytica. L'objectif était non seulement de capter leur attention, mais aussi de les inciter à visionner un documentaire qui explore en profondeur les enjeux de ce scandale. Étant un sujet complexe et peu connu de certains jeunes, il était essentiel de créer un visuel impactant qui susciterait leur curiosité et leur donnerait envie de s'informer davantage. Pour créer l'affiche, j'ai utilisé Photoshop et me suis concentrée sur un design minimaliste et percutant. J'ai opté pour des couleurs sombres et un contraste fort afin d'attirer l'attention,tout en mettant en avant des éléments graphiques représentant des aspects clés du scandale (comme le logo de Cambridge Analytica en arrière-plan). L'affiche devait non seulement être informative, mais aussi intrigante, de façon à pousser les lycéens à s'intéresser au sujet. Le slogan a été conçu pour être court et direct, afin de provoquer une réaction immédiate.",
         image: "../Images/Affiche.jpg",
-        lien:"../Images/Affiche.pdf",
-        type: "pdf"
+        lien:"../Images/Affiche.jpg",
+        type: "lien"
     },
     5: {
         titre: "Livret filmique",
@@ -57,9 +57,9 @@ if (projets[projetId]) {
     const projet = projets[projetId];
     let contentHTML = `
        <h1>${projet.titre}</h1>
-       <div class="grid"> <img src="${projet.image}" alt="${projet.titre}">
-        <p>${projet.description}</p> </div>`;
-
+       <div class="grid"><img src="${projet.image}" alt="${projet.titre}">
+       <div class= "pa"></div> </div>`;
+    let div = document.querySelector('.pa');
 
     // Gestion des vidéos
     if (projet.type === "video") {
@@ -82,16 +82,17 @@ if (projets[projetId]) {
 
     // Gestion des liens externes
     else if (projet.type === "lien") {
-        contentHTML += `<a href="${projet.lien}" target="_blank">Aller vers le site</a>`;
+        div  = `<p>${projet.description}</p><a href="${projet.lien}" target="_blank">Aller vers le site</a>`;
     }
 
     // Gestion des PDF
     else if (projet.type === "pdf") {
-        contentHTML += `<a href="${projet.pdf}" target="_blank">Voir le PDF</a>`;
+        div = `<p>${projet.description}</p><a href="${projet.pdf}" target="_blank">Voir le PDF</a>`;
     }
 
     // Insérer dans la page
     document.getElementById("projet-content").innerHTML = contentHTML;
+    document.querySelector(".pa").innerHTML = div;
 } else {
     document.getElementById("projet-content").innerHTML = `<p>Projet non trouvé.</p>`;
 }
